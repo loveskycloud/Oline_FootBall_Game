@@ -1,0 +1,44 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BLACK	include/color.h	3;"	d
+BLUE	include/color.h	11;"	d
+Ctrl	include/game.h	/^struct Ctrl {$/;"	s
+DBG	include/head.h	17;"	d
+DBG	include/head.h	19;"	d
+GREEN	include/color.h	7;"	d
+LIGHT_RED	include/color.h	15;"	d
+L_BLACK	include/color.h	4;"	d
+L_BLUE	include/color.h	12;"	d
+L_GREEN	include/color.h	8;"	d
+L_PINK	include/color.h	14;"	d
+L_RED	include/color.h	6;"	d
+L_YELLOW	include/color.h	10;"	d
+Map	include/game.h	/^struct Map {$/;"	s
+NONE	include/color.h	2;"	d
+PINK	include/color.h	13;"	d
+Point	include/game.h	/^struct Point {$/;"	s
+RED	include/color.h	5;"	d
+TransMsg	include/game.h	/^struct TransMsg {$/;"	s
+User	include/game.h	/^struct User {$/;"	s
+YELLOW	include/color.h	9;"	d
+carry	include/game.h	/^    int carry;$/;"	m	struct:Ctrl
+create_tcp_socket	src/tcp.c	/^int create_tcp_socket(int port) {$/;"	f
+create_udp_socket	src/udp.c	/^int create_udp_socket(int port) {$/;"	f
+ctrl	include/game.h	/^    struct Ctrl ctrl;$/;"	m	struct:TransMsg	typeref:struct:TransMsg::Ctrl
+dirx	include/game.h	/^    int dirx;$/;"	m	struct:TransMsg
+diry	include/game.h	/^    int diry;$/;"	m	struct:TransMsg
+flag	include/game.h	/^    int flag;$/;"	m	struct:User
+gate_heigth	include/game.h	/^    int gate_heigth;$/;"	m	struct:Map
+gate_width	include/game.h	/^    int gate_width;$/;"	m	struct:Map
+kick	include/game.h	/^    int kick;$/;"	m	struct:Ctrl
+main	server.c	/^int main(int argc, char **argv) {$/;"	f
+name	include/game.h	/^    char name[20];$/;"	m	struct:User
+point	include/game.h	/^    struct Point point;$/;"	m	struct:User	typeref:struct:User::Point
+start	include/game.h	/^    struct Point start;$/;"	m	struct:Map	typeref:struct:Map::Point
+team	include/game.h	/^    int team;$/;"	m	struct:User
+x	include/game.h	/^    int x, y;$/;"	m	struct:Point
+y	include/game.h	/^    int x, y;$/;"	m	struct:Point
