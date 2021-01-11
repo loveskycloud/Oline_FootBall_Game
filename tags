@@ -1,0 +1,76 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BLACK	client/include/color.h	3;"	d
+BLACK	server/include/color.h	3;"	d
+BLUE	client/include/color.h	11;"	d
+BLUE	server/include/color.h	11;"	d
+BLUE	server/include/game.h	4;"	d
+Ctrl	server/include/game.h	/^struct Ctrl {$/;"	s
+DBG	server/include/head.h	19;"	d
+DBG	server/include/head.h	21;"	d
+GREEN	client/include/color.h	7;"	d
+GREEN	server/include/color.h	7;"	d
+LIGHT_RED	client/include/color.h	15;"	d
+LIGHT_RED	server/include/color.h	15;"	d
+L_BLACK	client/include/color.h	4;"	d
+L_BLACK	server/include/color.h	4;"	d
+L_BLUE	client/include/color.h	12;"	d
+L_BLUE	server/include/color.h	12;"	d
+L_GREEN	client/include/color.h	8;"	d
+L_GREEN	server/include/color.h	8;"	d
+L_PINK	client/include/color.h	14;"	d
+L_PINK	server/include/color.h	14;"	d
+L_RED	client/include/color.h	6;"	d
+L_RED	server/include/color.h	6;"	d
+L_YELLOW	client/include/color.h	10;"	d
+L_YELLOW	server/include/color.h	10;"	d
+Map	server/include/game.h	/^struct Map {$/;"	s
+NONE	client/include/color.h	2;"	d
+NONE	server/include/color.h	2;"	d
+PINK	client/include/color.h	13;"	d
+PINK	server/include/color.h	13;"	d
+Point	server/include/game.h	/^struct Point {$/;"	s
+RED	client/include/color.h	5;"	d
+RED	server/include/color.h	5;"	d
+RED	server/include/game.h	3;"	d
+TransMsg	server/include/game.h	/^struct TransMsg {$/;"	s
+User	server/include/game.h	/^struct User {$/;"	s
+YELLOW	client/include/color.h	9;"	d
+YELLOW	server/include/color.h	9;"	d
+carry	server/include/game.h	/^    int carry;$/;"	m	struct:Ctrl
+conf	server/server.c	/^char conf[] = ".\/other\/server.conf";$/;"	v
+conf	server/src/main.cpp	/^char conf[] = "..\/other\/server.conf";$/;"	v
+court	server/server.c	/^struct Map court;$/;"	v	typeref:struct:Map
+create_newwin	server/src/draw.c	/^WINDOW *create_newwin(int width, int height, int  startx, int starty) {$/;"	f
+create_tcp_socket	server/src/tcp.c	/^int create_tcp_socket(int port) {$/;"	f
+create_udp_socket	server/src/udp.c	/^int create_udp_socket(int port) {$/;"	f
+ctrl	server/include/game.h	/^    struct Ctrl ctrl;$/;"	m	struct:TransMsg	typeref:struct:TransMsg::Ctrl
+destroy_win	server/src/draw.c	/^void destroy_win(WINDOW *win) {$/;"	f
+dirx	server/include/game.h	/^    int dirx;$/;"	m	struct:TransMsg
+diry	server/include/game.h	/^    int diry;$/;"	m	struct:TransMsg
+draw	server/src/draw.c	/^void *draw(void *arg) {$/;"	f
+flag	server/include/game.h	/^    int flag;$/;"	m	struct:User
+gate_height	server/include/game.h	/^    int gate_height;$/;"	m	struct:Map
+gate_width	server/include/game.h	/^    int gate_width;$/;"	m	struct:Map
+get_value	server/src/getvalue.c	/^char *get_value(char *path, char *pattern) {$/;"	f
+gotoxy	server/src/draw.c	/^void gotoxy(int x, int y) {$/;"	f
+gotoxy_putc	server/src/draw.c	/^void gotoxy_putc(int x, int y, char c) {$/;"	f
+gotoxy_puts	server/src/draw.c	/^void gotoxy_puts(int x, int y, char *str) {$/;"	f
+height	server/include/game.h	/^    int height;$/;"	m	struct:Map
+initfootball	server/src/draw.c	/^void initfootball() {$/;"	f
+kick	server/include/game.h	/^    int kick;$/;"	m	struct:Ctrl
+main	server/server.c	/^int main(int argc, char **argv) {$/;"	f
+main	server/src/main.cpp	/^int main()$/;"	f
+name	server/include/game.h	/^    char name[20];$/;"	m	struct:User
+point	server/include/game.h	/^    struct Point point;$/;"	m	struct:User	typeref:struct:User::Point
+start	server/include/game.h	/^    struct Point start;$/;"	m	struct:Map	typeref:struct:Map::Point
+team	server/include/game.h	/^    int team;$/;"	m	struct:User
+w_gotoxy_putc	server/src/draw.c	/^void w_gotoxy_putc(WINDOW *win, int x, int y, char c) {$/;"	f
+w_gotoxy_puts	server/src/draw.c	/^void w_gotoxy_puts(WINDOW *win, int x, int y, char *str) {$/;"	f
+width	server/include/game.h	/^    int width;$/;"	m	struct:Map
+x	server/include/game.h	/^    int x, y;$/;"	m	struct:Point
+y	server/include/game.h	/^    int x, y;$/;"	m	struct:Point

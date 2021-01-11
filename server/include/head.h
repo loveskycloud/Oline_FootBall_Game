@@ -12,6 +12,8 @@
 #include <pthread.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
+#include <curses.h>
+#include "getvalue.h"
 // DBG
 #ifndef _D
 #define DBG(fmt, args...) printf(fmt, ##args)

@@ -1,5 +1,8 @@
 #pragma once
 
+#define REDTEAM 1 //the red team
+#define BLUETEAM 2 //the blue team
+
 struct Point {
     int x, y;
 };
@@ -23,12 +26,9 @@ struct TransMsg {
 };
 
 struct Map {
+    int width;
+    int height;
     struct Point start;
     int gate_width;
-    int gate_heigth;
-}
-
-
-
-
-
+    int gate_height;
+};
