@@ -2,6 +2,12 @@
 
 #define REDTEAM 1 //the red team
 #define BLUETEAM 2 //the blue team
+#define MAX 50
+
+struct LogData {
+    char name[20];
+    int team;
+};
 
 struct Point {
     int x, y;

@@ -1,8 +1,9 @@
 #include "head.h"
-#include "draw.h"
-#include "game.h"
 
 extern struct Map court;
+
+
+WINDOW *Football, *Message, *Help, *Score, *Write;
 
 WINDOW *create_newwin(int width, int height, int  startx, int starty) {
     WINDOW *win;
@@ -63,12 +64,14 @@ void initfootball() {
     init_pair(5, COLOR_CYAN, COLOR_BLACK);
     init_pair(6, COLOR_BLUE, COLOR_BLACK);
 
-    create_newwin(court.width, court.height, court.start.x, court.start.y);
-    create_newwin(court.width, 5, court.start.x, court.start.y + court.height);
-    create_newwin(20, court.height, court.start.x + court.width, court.start.y);
-    create_newwin(20, 5, court.start.x + court.width, court.start.y + court.height);
-    create_newwin(court.width + 20, 5, court.start.x, court.start.y + court.height + 5);
-    
+    Football = create_newwin(court.width, court.height, court.start.x, court.start.y);
+    Message = create_newwin(court.width, 5, court.start.x, court.start.y + court.height);
+
+    scrollok(Message, 1);
+
+    Help = create_newwin(20, court.height, court.start.x + court.width, court.start.y);
+    Score = create_newwin(20, 5, court.start.x + court.width, court.start.y + court.height);
+    Write = create_newwin(court.width + 20, 5, court.start.x, court.start.y + court.height + 5);
 }
 
 

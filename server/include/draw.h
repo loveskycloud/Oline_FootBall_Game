@@ -2,6 +2,8 @@
 
 extern struct Map court;
 
+extern WINDOW *Football, *Message, *Help, *Score, *Write;
+
 void initgame();
 void drawpeople();
 void drawball();

@@ -13,7 +13,12 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <curses.h>
+#include <sys/epoll.h>
 #include "getvalue.h"
+#include "color.h"
+#include "udp.h"
+#include "game.h"
+#include "draw.h"
 // DBG
 #ifndef _D
 #define DBG(fmt, args...) printf(fmt, ##args)
