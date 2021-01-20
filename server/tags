@@ -1,0 +1,85 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BLACK	include/color.h	3;"	d
+BLUE	include/color.h	11;"	d
+BLUETEAM	include/game.h	4;"	d
+Ctrl	include/game.h	/^struct Ctrl {$/;"	s
+DBG	include/head.h	24;"	d
+DBG	include/head.h	26;"	d
+Football	src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
+GREEN	include/color.h	7;"	d
+Help	src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
+IP	Makefile	/^IP=$/;"	m
+LIGHT_RED	include/color.h	15;"	d
+L_BLACK	include/color.h	4;"	d
+L_BLUE	include/color.h	12;"	d
+L_GREEN	include/color.h	8;"	d
+L_PINK	include/color.h	14;"	d
+L_RED	include/color.h	6;"	d
+L_YELLOW	include/color.h	10;"	d
+LogData	include/game.h	/^struct LogData {$/;"	s
+LogRequest	include/game.h	/^struct LogRequest {$/;"	s
+LogResponse	include/game.h	/^struct LogResponse{ $/;"	s
+MAX	include/game.h	5;"	d
+Map	include/game.h	/^struct Map {$/;"	s
+Message	src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
+NONE	include/color.h	2;"	d
+P	Makefile	/^P=$/;"	m
+PINK	include/color.h	13;"	d
+PORT	Makefile	/^PORT=$/;"	m
+Point	include/game.h	/^struct Point {$/;"	s
+RED	include/color.h	5;"	d
+REDTEAM	include/game.h	3;"	d
+Score	src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
+TransMsg	include/game.h	/^struct TransMsg {$/;"	s
+User	include/game.h	/^struct User {$/;"	s
+Write	src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
+YELLOW	include/color.h	9;"	d
+add_event	src/udp_epoll.c	/^void add_event(int epollfd, int fd, int event) {$/;"	f
+bteam	server.c	/^struct User *bteam;$/;"	v	typeref:struct:User
+carry	include/game.h	/^    int carry;$/;"	m	struct:Ctrl
+conf	server.c	/^char conf[] = ".\/other\/server.conf";$/;"	v
+court	server.c	/^struct Map court;$/;"	v	typeref:struct:Map
+create_newwin	src/draw.c	/^WINDOW *create_newwin(int width, int height, int  startx, int starty) {$/;"	f
+create_tcp_socket	src/tcp.c	/^int create_tcp_socket(int port) {$/;"	f
+create_udp_socket	src/udp.c	/^int create_udp_socket(int port) {$/;"	f
+ctrl	include/game.h	/^    struct Ctrl ctrl;$/;"	m	struct:TransMsg	typeref:struct:TransMsg::Ctrl
+del_event	src/udp_epoll.c	/^void del_event(int epollfd, int fd, int events) {$/;"	f
+destroy_win	src/draw.c	/^void destroy_win(WINDOW *win) {$/;"	f
+dirx	include/game.h	/^    int dirx;$/;"	m	struct:TransMsg
+diry	include/game.h	/^    int diry;$/;"	m	struct:TransMsg
+draw	src/draw.c	/^void *draw(void *arg) {$/;"	f
+flag	include/game.h	/^    int flag;$/;"	m	struct:User
+gate_height	include/game.h	/^    int gate_height;$/;"	m	struct:Map
+gate_width	include/game.h	/^    int gate_width;$/;"	m	struct:Map
+get_value	src/getvalue.c	/^char *get_value(char *path, char *pattern) {$/;"	f
+gotoxy	src/draw.c	/^void gotoxy(int x, int y) {$/;"	f
+gotoxy_putc	src/draw.c	/^void gotoxy_putc(int x, int y, char c) {$/;"	f
+gotoxy_puts	src/draw.c	/^void gotoxy_puts(int x, int y, char *str) {$/;"	f
+height	include/game.h	/^    int height;$/;"	m	struct:Map
+initfootball	src/draw.c	/^void initfootball() {$/;"	f
+kick	include/game.h	/^    int kick;$/;"	m	struct:Ctrl
+main	server.c	/^int main(int argc, char **argv) {$/;"	f
+msg	include/game.h	/^    char msg[512];$/;"	m	struct:LogRequest
+msg	include/game.h	/^    char msg[512];$/;"	m	struct:LogResponse
+name	include/game.h	/^    char name[20];$/;"	m	struct:LogData
+name	include/game.h	/^    char name[20];$/;"	m	struct:LogRequest
+name	include/game.h	/^    char name[20];$/;"	m	struct:User
+point	include/game.h	/^    struct Point point;$/;"	m	struct:User	typeref:struct:User::Point
+rteam	server.c	/^struct User *rteam;$/;"	v	typeref:struct:User
+start	include/game.h	/^    struct Point start;$/;"	m	struct:Map	typeref:struct:Map::Point
+team	include/game.h	/^    int team;$/;"	m	struct:LogData
+team	include/game.h	/^    int team;$/;"	m	struct:LogRequest
+team	include/game.h	/^    int team;$/;"	m	struct:User
+type	include/game.h	/^    int type;$/;"	m	struct:LogResponse
+udp_accept	src/udp_epoll.c	/^int udp_accept(int epollfd, int fd) {$/;"	f
+udp_connect	src/udp_epoll.c	/^int udp_connect(int epollfdd, struct sockaddr *serveraddr) {$/;"	f
+w_gotoxy_putc	src/draw.c	/^void w_gotoxy_putc(WINDOW *win, int x, int y, char c) {$/;"	f
+w_gotoxy_puts	src/draw.c	/^void w_gotoxy_puts(WINDOW *win, int x, int y, char *str) {$/;"	f
+width	include/game.h	/^    int width;$/;"	m	struct:Map
+x	include/game.h	/^    int x, y;$/;"	m	struct:Point
+y	include/game.h	/^    int x, y;$/;"	m	struct:Point

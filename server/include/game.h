@@ -4,6 +4,17 @@
 #define BLUETEAM 2 //the blue team
 #define MAX 50
 
+struct LogRequest {
+    char name[20];
+    int team;
+    char msg[512];
+};
+
+struct LogResponse{ 
+    int type;
+    char msg[512];
+};
+
 struct LogData {
     char name[20];
     int team;

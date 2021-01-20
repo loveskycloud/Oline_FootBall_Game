@@ -8,12 +8,16 @@ BLACK	client/include/color.h	3;"	d
 BLACK	server/include/color.h	3;"	d
 BLUE	client/include/color.h	11;"	d
 BLUE	server/include/color.h	11;"	d
-BLUE	server/include/game.h	4;"	d
+BLUETEAM	server/include/game.h	4;"	d
+BUFSIZE	udp/server.c	4;"	d	file:
 Ctrl	server/include/game.h	/^struct Ctrl {$/;"	s
-DBG	server/include/head.h	19;"	d
-DBG	server/include/head.h	21;"	d
+DBG	server/include/head.h	24;"	d
+DBG	server/include/head.h	26;"	d
+Football	server/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
 GREEN	client/include/color.h	7;"	d
 GREEN	server/include/color.h	7;"	d
+Help	server/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
+IP	server/Makefile	/^IP=$/;"	m
 LIGHT_RED	client/include/color.h	15;"	d
 LIGHT_RED	server/include/color.h	15;"	d
 L_BLACK	client/include/color.h	4;"	d
@@ -28,27 +32,38 @@ L_RED	client/include/color.h	6;"	d
 L_RED	server/include/color.h	6;"	d
 L_YELLOW	client/include/color.h	10;"	d
 L_YELLOW	server/include/color.h	10;"	d
+LogData	server/include/game.h	/^struct LogData {$/;"	s
+MAX	server/include/game.h	5;"	d
 Map	server/include/game.h	/^struct Map {$/;"	s
+Message	server/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
 NONE	client/include/color.h	2;"	d
 NONE	server/include/color.h	2;"	d
+P	server/Makefile	/^P=$/;"	m
 PINK	client/include/color.h	13;"	d
 PINK	server/include/color.h	13;"	d
+POLLSIZE	udp/server.c	3;"	d	file:
+PORT	server/Makefile	/^PORT=$/;"	m
 Point	server/include/game.h	/^struct Point {$/;"	s
 RED	client/include/color.h	5;"	d
 RED	server/include/color.h	5;"	d
-RED	server/include/game.h	3;"	d
+REDTEAM	server/include/game.h	3;"	d
+Score	server/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
 TransMsg	server/include/game.h	/^struct TransMsg {$/;"	s
 User	server/include/game.h	/^struct User {$/;"	s
+Write	server/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
 YELLOW	client/include/color.h	9;"	d
 YELLOW	server/include/color.h	9;"	d
+add_event	server/src/udp_epoll.c	/^void add_event(int epollfd, int fd, int event) {$/;"	f
+bteam	server/server.c	/^struct User *bteam;$/;"	v	typeref:struct:User
 carry	server/include/game.h	/^    int carry;$/;"	m	struct:Ctrl
+conf	client/client.c	/^char conf[] = ".\/other\/conf";$/;"	v
 conf	server/server.c	/^char conf[] = ".\/other\/server.conf";$/;"	v
-conf	server/src/main.cpp	/^char conf[] = "..\/other\/server.conf";$/;"	v
 court	server/server.c	/^struct Map court;$/;"	v	typeref:struct:Map
 create_newwin	server/src/draw.c	/^WINDOW *create_newwin(int width, int height, int  startx, int starty) {$/;"	f
 create_tcp_socket	server/src/tcp.c	/^int create_tcp_socket(int port) {$/;"	f
 create_udp_socket	server/src/udp.c	/^int create_udp_socket(int port) {$/;"	f
 ctrl	server/include/game.h	/^    struct Ctrl ctrl;$/;"	m	struct:TransMsg	typeref:struct:TransMsg::Ctrl
+del_event	server/src/udp_epoll.c	/^void del_event(int epollfd, int fd, int events) {$/;"	f
 destroy_win	server/src/draw.c	/^void destroy_win(WINDOW *win) {$/;"	f
 dirx	server/include/game.h	/^    int dirx;$/;"	m	struct:TransMsg
 diry	server/include/game.h	/^    int diry;$/;"	m	struct:TransMsg
@@ -63,12 +78,18 @@ gotoxy_puts	server/src/draw.c	/^void gotoxy_puts(int x, int y, char *str) {$/;"	
 height	server/include/game.h	/^    int height;$/;"	m	struct:Map
 initfootball	server/src/draw.c	/^void initfootball() {$/;"	f
 kick	server/include/game.h	/^    int kick;$/;"	m	struct:Ctrl
+main	client/client.c	/^int main(int argc, char **argv)$/;"	f
 main	server/server.c	/^int main(int argc, char **argv) {$/;"	f
-main	server/src/main.cpp	/^int main()$/;"	f
+main	udp/server.c	/^int main(int argc, char **argv)$/;"	f
+name	server/include/game.h	/^    char name[20];$/;"	m	struct:LogData
 name	server/include/game.h	/^    char name[20];$/;"	m	struct:User
 point	server/include/game.h	/^    struct Point point;$/;"	m	struct:User	typeref:struct:User::Point
+rteam	server/server.c	/^struct User *rteam;$/;"	v	typeref:struct:User
 start	server/include/game.h	/^    struct Point start;$/;"	m	struct:Map	typeref:struct:Map::Point
+team	server/include/game.h	/^    int team;$/;"	m	struct:LogData
 team	server/include/game.h	/^    int team;$/;"	m	struct:User
+udp_accept	server/src/udp_epoll.c	/^int udp_accept(int epollfd, int fd) {$/;"	f
+udp_connect	server/src/udp_epoll.c	/^int udp_connect(int epollfdd, struct sockaddr *serveraddr) {$/;"	f
 w_gotoxy_putc	server/src/draw.c	/^void w_gotoxy_putc(WINDOW *win, int x, int y, char c) {$/;"	f
 w_gotoxy_puts	server/src/draw.c	/^void w_gotoxy_puts(WINDOW *win, int x, int y, char *str) {$/;"	f
 width	server/include/game.h	/^    int width;$/;"	m	struct:Map
