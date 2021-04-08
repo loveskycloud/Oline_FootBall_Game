@@ -90,6 +90,7 @@ int main(int argc, char **argv)
         }
     } else {
         DBG(RED "ERROR : " NONE "The Game Server is out of service.\n");
+        exit(1);
     }
 
     connect(sockfd, (struct sockaddr *)&server, len);
