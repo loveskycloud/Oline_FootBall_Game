@@ -68,23 +68,39 @@ int main(int argc, char **argv)
 
 
     sendto(sockfd, (void *)&request, sizeof(request), 0, (struct sockaddr *)&server, len);
-    
-    int ret = recvfrom(sockfd, (void *)&response, sizeof(response), 0, (struct sockaddr *)&server, &len);
 
-    if (ret != sizeof(response) || response.type) {
-        DBG(RED "ERROR : " NONE "The Game Server refused your login.\n\t This May be helpfull: %s\n", response.msg);
+    fd_set set;
+    FD_ZERO(&set);
+    FD_SET(sockfd, &set);
+    struct timeval tv;
+    tv.tv_sec = 5;
+    tv.tv_usec = 0;
+
+    int retval = select(sockfd + 1, &set, NULL, NULL, &tv);
+
+    if (retval == -1) {
+        perror("select");
         exit(1);
+    } else if (retval) {
+        int ret = recvfrom(sockfd, (void *)&response, sizeof(response), 0, (struct sockaddr *)&server, &len);
+
+        if (ret != sizeof(response) || response.type) {
+            DBG(RED "ERROR : " NONE "The Game Server refused your login.\n\t This May be helpfull: %s\n", response.msg);
+            exit(1);
+        }
+    } else {
+        DBG(RED "ERROR : " NONE "The Game Server is out of service.\n");
     }
 
     connect(sockfd, (struct sockaddr *)&server, len);
-   
+
     sleep(10);
     pid_t pid;
     if ((pid = fork()) < 0) {
         perror("fork");
         exit(1);
     }
-    
+
     if (pid == 0) {
         fclose(stdin);
         while (1) {
