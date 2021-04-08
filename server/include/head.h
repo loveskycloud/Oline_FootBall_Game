@@ -19,6 +19,9 @@
 #include "udp.h"
 #include "game.h"
 #include "draw.h"
+#include "udp_epoll.h"
+#include "thread_pool.h"
+#include "sub_reactor.h"
 // DBG
 #ifndef _D
 #define DBG(fmt, args...) printf(fmt, ##args)
