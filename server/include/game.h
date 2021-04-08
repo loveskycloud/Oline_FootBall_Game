@@ -4,6 +4,7 @@
 #define BLUETEAM 2 //the blue team
 #define MAX 50
 #define MAXMSG 1024
+
 struct LogRequest {
     char name[20];
     int team; //0 RED 1 BLUE

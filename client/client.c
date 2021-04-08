@@ -1,4 +1,5 @@
 #include "head.h"
+#include "game.h"
 
 char conf[] = "./other/client.conf";
 char server_ip[20] = {0};
@@ -76,7 +77,42 @@ int main(int argc, char **argv)
     }
 
     connect(sockfd, (struct sockaddr *)&server, len);
+   
+    sleep(10);
+    pid_t pid;
+    if ((pid = fork()) < 0) {
+        perror("fork");
+        exit(1);
+    }
     
+    if (pid == 0) {
+        fclose(stdin);
+        while (1) {
+            struct FootBallMsg Msg;
+
+            ssize_t rsize = recv(sockfd, (void *)&Msg, sizeof(Msg), 0);
+            if (Msg.type & FT_TEST) {
+                DBG(RED "HeartBeat from server \n" NONE);
+                Msg.type = FT_ACK;
+                send(sockfd, (void *)&Msg, sizeof(Msg), 0);
+            } else if (Msg.type & (FT_MSG | FT_WALL)) {
+                DBG(GREEN "Server Msg : " NONE "%s\n", Msg.msg);
+            } else {
+                DBG(GREEN "Server Msg : " NONE "Unsupport Message Type.\n");
+            }
+        }
+    } else {
+        while (1) {
+            struct FootBallMsg msg;
+            msg.type = FT_MSG;
+            DBG(YELLOW "Input Message : " NONE);
+            fflush(stdout);
+            scanf("%[^\n]s", msg.msg);
+            getchar();
+            send(sockfd, (void *)&msg, sizeof(msg), 0);
+        }
+    }
+
     return 0;
 }
 

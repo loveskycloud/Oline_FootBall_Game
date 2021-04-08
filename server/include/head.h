@@ -22,6 +22,8 @@
 #include "udp_epoll.h"
 #include "thread_pool.h"
 #include "sub_reactor.h"
+#include "heart_beat.h"
+#include "stdint.h"
 // DBG
 #ifndef _D
 #define DBG(fmt, args...) printf(fmt, ##args)

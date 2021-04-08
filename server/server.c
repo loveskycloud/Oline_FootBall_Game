@@ -10,6 +10,10 @@ struct User *bteam;
 extern WINDOW *Football, *Message, *Help, *Score, *Write;
 int port;
 int server_port = 8888;
+int epoll_fd;
+int repollfd;
+int bepollfd;
+
 
 int main(int argc, char **argv) {
     int opt;
@@ -57,10 +61,7 @@ int main(int argc, char **argv) {
     pthread_t blue_t;
     /* pthread_t heart_t; */
 
-    int epoll_fd;
-    int repollfd;
-    int bepollfd;
-    /* pthread_create(&tid, NULL, draw, NULL); */
+        /* pthread_create(&tid, NULL, draw, NULL); */
     
     epoll_fd = epoll_create(MAX * 2);
     repollfd = epoll_create(MAX);
@@ -110,10 +111,10 @@ int main(int argc, char **argv) {
             DBG(YELLOW "EPOLL" NONE " : Doing with %dth fd\n", i);
             if (events[i].data.fd ==listener) {
 
-                int new_fd = udp_accept(epoll_fd, listener);
+                int new_fd = udp_accept(epoll_fd, listener, &user);
                 if (new_fd > 0) {
                     DBG(YELLOW "Main Thread" NONE " : Add %s to %s sub_reactor.\n", user.name, (user.team ? "BLUE" : "RED"));
-                    /* add_to_sub_reactor(&user); */
+                    add_to_sub_reactor(&user);
                 }
             } else {
                 recv(events[i].data.fd, buff, sizeof(buff), 0);

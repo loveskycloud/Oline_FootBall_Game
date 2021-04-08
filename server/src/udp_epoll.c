@@ -1,5 +1,10 @@
 #include "head.h"
 
+extern int port;
+extern struct User *rteam;
+extern struct User *bteam;
+extern int repollfd, bepollfd;
+
 void add_event(int epollfd, int fd, int events) {
     struct epoll_event ev;
     ev.events = events;
@@ -36,7 +41,7 @@ int udp_connect(int epollfd, struct sockaddr *serveraddr) {
     return sockfd;
 }
 
-int udp_accept(int epollfd, int fd) {
+int udp_accept(int epollfd, int fd, struct User *user) {
     struct sockaddr_in client;
     int new_fd, ret;
     struct LogRequest request;
@@ -65,7 +70,6 @@ int udp_accept(int epollfd, int fd) {
         DBG(GREEN "INFO" NONE " : " RED " %s on %s:%d login! (%s)\n" NONE, request.name, inet_ntoa(client.sin_addr), ntohs(client.sin_port), request.msg);
     } 
 
-
     strcpy(user->name, request.name);
     user->team = request.team;
     DBG(GREEN "INFO" NONE " : %s : %d login!\n", inet_ntoa(client.sin_addr), ntohs(client.sin_port));
@@ -83,7 +87,7 @@ int find_sub(struct User *team) {
 }
 
 void add_to_sub_reactor(struct User *user) {
-    struct User *team = (user->team ? bteam : bteam);
+    struct User *team = (user->team ? bteam : rteam);
     DBG(YELLOW "Main Thread : " NONE "Add to sub_reactor\n");
     int sub = find_sub(team);
     team[sub] = *user;
