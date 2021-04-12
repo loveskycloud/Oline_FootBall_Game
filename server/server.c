@@ -8,8 +8,7 @@ char server_ip[] = "127.0.0.1";
 struct User *rteam;
 struct User *bteam;
 extern WINDOW *Football, *Message, *Help, *Score, *Write;
-int port;
-int server_port = 8888;
+int clientport = 0;
 int epoll_fd;
 int repollfd;
 int bepollfd;
@@ -22,7 +21,7 @@ int main(int argc, char **argv) {
     while ((opt = getopt(argc, argv, "p:")) != -1) {
         switch((char)opt) {
         case 'p':
-            port = atoi(argv[2]);
+            clientport = atoi(argv[2]);
             break;
         default:
             fprintf(stderr, "Usage: %s [-p port]\n", argv[1]);
@@ -37,7 +36,7 @@ int main(int argc, char **argv) {
         exit(1);
     }
 
-    if (!port) port = atoi(get_value(conf, (char *)"PORT"));
+    if (!clientport) clientport = atoi(get_value(conf, (char *)"PORT"));
 
     court.width = atoi(get_value(conf, (char *)"COLS"));
     court.height = atoi(get_value(conf, (char *)"LINES"));
@@ -48,18 +47,18 @@ int main(int argc, char **argv) {
     rteam = (struct User *)calloc(MAX, sizeof(struct User));
     bteam = (struct User *)calloc(MAX, sizeof(struct User));
 
-    if ((listener = create_udp_socket()) < 0) {
+    if ((listener = create_server_udp_socket(clientport)) < 0) {
         perror("create_udp_socket");
         exit(1);
     }
 
-    DBG(GREEN "INFO" NONE " : Server start on port %d\n", port);
+    DBG(GREEN "INFO" NONE " : Server start on port %d\n", clientport);
 
     pthread_t tid;
 
     pthread_t red_t;
     pthread_t blue_t;
-    /* pthread_t heart_t; */
+    pthread_t heart_t;
 
         /* pthread_create(&tid, NULL, draw, NULL); */
     
@@ -82,7 +81,9 @@ int main(int argc, char **argv) {
     
     pthread_create(&red_t, NULL, sub_reactor, (void *)&redQueue);
     pthread_create(&blue_t, NULL, sub_reactor, (void *)&blueQueue);
-    /* pthread_create(&heart_t, NULL, heart_beat, NULL); */
+    pthread_create(&heart_t, NULL, heart_beat, NULL);
+
+    signal(SIGINT, server_exit);
 
 
     struct epoll_event ev, events[MAX * 2];

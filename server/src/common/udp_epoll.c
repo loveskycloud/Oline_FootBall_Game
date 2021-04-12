@@ -5,6 +5,16 @@ extern struct User *rteam;
 extern struct User *bteam;
 extern int repollfd, bepollfd;
 
+int check_online(struct LogRequest *request) {
+    for (int i = 0; i < MAX; i++) {
+        if (rteam[i].online && !strcmp(rteam[i].name, request->name))
+        return 1;
+        if (bteam[i].online && !strcmp(bteam[i].name, request->name)) 
+        return 1;
+    }
+    return 0;
+}
+
 void add_event(int epollfd, int fd, int events) {
     struct epoll_event ev;
     ev.events = events;
@@ -20,25 +30,24 @@ void add_event_ptr(int epollfd, int fd, int events, struct User *user) {
     DBG(GREEN "Sub Thread" NONE " : After Epoll Add %s.\n", user->name);
 }
 
-void del_event(int epollfd, int fd, int events) {
-    struct epoll_event ev;
-    ev.data.fd = fd;
-    ev.events = events;
-    epoll_ctl(epollfd, EPOLL_CTL_DEL, fd, &ev);
+void del_event(int epollfd, int fd) {
+    epoll_ctl(epollfd, EPOLL_CTL_DEL, fd, NULL);
 }
  
-int udp_connect(int epollfd, struct sockaddr *serveraddr) {
-    int sockfd;
-    if ((sockfd = create_udp_socket()) < 0) {
+int udp_connect(int epollfd, struct sockaddr_in *serveraddr) {
+    int serverfd;
+    
+    if ((serverfd = create_server_udp_socket(8888)) < 0) {
         perror("socket_udp");
         return -1;
     }
-
-    if (connect(sockfd, (struct sockaddr *)&serveraddr, sizeof(struct sockaddr)) < 0) {
+    socklen_t len = sizeof(serveraddr);
+    if (connect(serverfd, (struct sockaddr *)&serveraddr, sizeof(struct sockaddr)) < 0) {
+        printf("shibai ...\n");
         perror("connect");
         return -1;
     }
-    return sockfd;
+    return serverfd;
 }
 
 int udp_accept(int epollfd, int fd, struct User *user) {
@@ -60,6 +69,13 @@ int udp_accept(int epollfd, int fd, struct User *user) {
         return -1;
     }
 
+    if (check_online(&request)) {
+        response.type = 1;
+        strcpy(response.msg, "You are already playing this game!\n");
+        sendto(fd, (void *)&response, sizeof(response), 0, (struct sockaddr *)&client, len);
+        return -1;
+    }
+
     response.type = 0;
     strcpy(response.msg, "Login success. Enjoy yourself.");
     sendto(fd, (void *)&response, sizeof(response), 0, (struct sockaddr *)&client, len);
@@ -73,9 +89,8 @@ int udp_accept(int epollfd, int fd, struct User *user) {
     strcpy(user->name, request.name);
     user->team = request.team;
     DBG(GREEN "INFO" NONE " : %s : %d login!\n", inet_ntoa(client.sin_addr), ntohs(client.sin_port));
+    new_fd = udp_connect(epollfd, &client);
     user->fd = new_fd;
-    new_fd = udp_connect(epollfd, (struct sockaddr *)&client);
-
     return new_fd;
 }
 

@@ -4,12 +4,12 @@
 char conf[] = "./other/client.conf";
 char server_ip[20] = {0};
 int server_port = 0;
-int port;
+int sockfd;
 
 int main(int argc, char **argv)
 {
-    int sockfd;
     int opt;
+    pthread_t recv_t;
     struct LogRequest request;
     struct LogResponse response;
     bzero(&request, sizeof(request));
@@ -95,30 +95,8 @@ int main(int argc, char **argv)
 
     connect(sockfd, (struct sockaddr *)&server, len);
 
-    sleep(10);
-    pid_t pid;
-    if ((pid = fork()) < 0) {
-        perror("fork");
-        exit(1);
-    }
+    pthread_create(&recv_t, NULL, client_recv, NULL);
 
-    if (pid == 0) {
-        fclose(stdin);
-        while (1) {
-            struct FootBallMsg Msg;
-
-            ssize_t rsize = recv(sockfd, (void *)&Msg, sizeof(Msg), 0);
-            if (Msg.type & FT_TEST) {
-                DBG(RED "HeartBeat from server \n" NONE);
-                Msg.type = FT_ACK;
-                send(sockfd, (void *)&Msg, sizeof(Msg), 0);
-            } else if (Msg.type & (FT_MSG | FT_WALL)) {
-                DBG(GREEN "Server Msg : " NONE "%s\n", Msg.msg);
-            } else {
-                DBG(GREEN "Server Msg : " NONE "Unsupport Message Type.\n");
-            }
-        }
-    } else {
         while (1) {
             struct FootBallMsg msg;
             msg.type = FT_MSG;
@@ -128,8 +106,6 @@ int main(int argc, char **argv)
             getchar();
             send(sockfd, (void *)&msg, sizeof(msg), 0);
         }
-    }
-
     return 0;
 }
 

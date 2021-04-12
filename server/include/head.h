@@ -23,7 +23,10 @@
 #include "thread_pool.h"
 #include "sub_reactor.h"
 #include "heart_beat.h"
-#include "stdint.h"
+#include "client_recv.h"
+#include "server_exit.h"
+#include "udp_client.h"
+#include "common.h"
 // DBG
 #ifndef _D
 #define DBG(fmt, args...) printf(fmt, ##args)

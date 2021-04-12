@@ -4,94 +4,359 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BLACK	client/bak/color.h	3;"	d
 BLACK	client/include/color.h	3;"	d
 BLACK	server/include/color.h	3;"	d
+BLUE	client/bak/color.h	11;"	d
 BLUE	client/include/color.h	11;"	d
 BLUE	server/include/color.h	11;"	d
+BLUETEAM	client/include/datatype.h	4;"	d
+BLUETEAM	client/include/game.h	4;"	d
+BLUETEAM	server/include/datatype.h	4;"	d
 BLUETEAM	server/include/game.h	4;"	d
 BUFSIZE	udp/server.c	4;"	d	file:
+Ctrl	client/include/datatype.h	/^struct Ctrl {$/;"	s
+Ctrl	client/include/game.h	/^struct Ctrl {$/;"	s
+Ctrl	server/include/datatype.h	/^struct Ctrl {$/;"	s
 Ctrl	server/include/game.h	/^struct Ctrl {$/;"	s
-DBG	server/include/head.h	24;"	d
-DBG	server/include/head.h	26;"	d
+DBG	client/include/head.h	30;"	d
+DBG	client/include/head.h	32;"	d
+DBG	server/include/head.h	30;"	d
+DBG	server/include/head.h	32;"	d
+FT_ACK	client/include/datatype.h	53;"	d
+FT_ACK	client/include/game.h	54;"	d
+FT_ACK	server/include/datatype.h	53;"	d
+FT_ACK	server/include/game.h	54;"	d
+FT_FIN	client/include/game.h	55;"	d
+FT_FIN	server/include/game.h	55;"	d
+FT_MSG	client/include/datatype.h	52;"	d
+FT_MSG	client/include/game.h	53;"	d
+FT_MSG	server/include/datatype.h	52;"	d
+FT_MSG	server/include/game.h	53;"	d
+FT_TEST	client/include/datatype.h	50;"	d
+FT_TEST	client/include/game.h	51;"	d
+FT_TEST	server/include/datatype.h	50;"	d
+FT_TEST	server/include/game.h	51;"	d
+FT_WALL	client/include/datatype.h	51;"	d
+FT_WALL	client/include/game.h	52;"	d
+FT_WALL	server/include/datatype.h	51;"	d
+FT_WALL	server/include/game.h	52;"	d
+FootBallMsg	client/include/datatype.h	/^struct FootBallMsg {$/;"	s
+FootBallMsg	client/include/game.h	/^struct FootBallMsg {$/;"	s
+FootBallMsg	server/include/datatype.h	/^struct FootBallMsg {$/;"	s
+FootBallMsg	server/include/game.h	/^struct FootBallMsg {$/;"	s
+Football	client/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
 Football	server/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
+GREEN	client/bak/color.h	7;"	d
 GREEN	client/include/color.h	7;"	d
 GREEN	server/include/color.h	7;"	d
+Help	client/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
 Help	server/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
-IP	server/Makefile	/^IP=$/;"	m
+LIGHT_RED	client/bak/color.h	15;"	d
 LIGHT_RED	client/include/color.h	15;"	d
 LIGHT_RED	server/include/color.h	15;"	d
+L_BLACK	client/bak/color.h	4;"	d
 L_BLACK	client/include/color.h	4;"	d
 L_BLACK	server/include/color.h	4;"	d
+L_BLUE	client/bak/color.h	12;"	d
 L_BLUE	client/include/color.h	12;"	d
 L_BLUE	server/include/color.h	12;"	d
+L_GREEN	client/bak/color.h	8;"	d
 L_GREEN	client/include/color.h	8;"	d
 L_GREEN	server/include/color.h	8;"	d
+L_PINK	client/bak/color.h	14;"	d
 L_PINK	client/include/color.h	14;"	d
 L_PINK	server/include/color.h	14;"	d
+L_RED	client/bak/color.h	6;"	d
 L_RED	client/include/color.h	6;"	d
 L_RED	server/include/color.h	6;"	d
+L_YELLOW	client/bak/color.h	10;"	d
 L_YELLOW	client/include/color.h	10;"	d
 L_YELLOW	server/include/color.h	10;"	d
-LogData	server/include/game.h	/^struct LogData {$/;"	s
+LogRequest	client/include/datatype.h	/^struct LogRequest {$/;"	s
+LogRequest	client/include/game.h	/^struct LogRequest {$/;"	s
+LogRequest	server/include/datatype.h	/^struct LogRequest {$/;"	s
+LogRequest	server/include/game.h	/^struct LogRequest {$/;"	s
+LogResponse	client/include/datatype.h	/^struct LogResponse{ $/;"	s
+LogResponse	client/include/game.h	/^struct LogResponse{ $/;"	s
+LogResponse	server/include/datatype.h	/^struct LogResponse{ $/;"	s
+LogResponse	server/include/game.h	/^struct LogResponse{ $/;"	s
+MAX	client/include/datatype.h	5;"	d
+MAX	client/include/game.h	5;"	d
+MAX	server/include/datatype.h	5;"	d
 MAX	server/include/game.h	5;"	d
+MAXMSG	client/include/datatype.h	6;"	d
+MAXMSG	client/include/game.h	6;"	d
+MAXMSG	server/include/datatype.h	6;"	d
+MAXMSG	server/include/game.h	6;"	d
+MAXTHREAD	client/include/thread_pool.h	3;"	d
+MAXTHREAD	server/include/thread_pool.h	3;"	d
+Map	client/include/datatype.h	/^struct Map {$/;"	s
+Map	client/include/game.h	/^struct Map {$/;"	s
+Map	server/include/datatype.h	/^struct Map {$/;"	s
 Map	server/include/game.h	/^struct Map {$/;"	s
+Message	client/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
 Message	server/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
+NONE	client/bak/color.h	2;"	d
 NONE	client/include/color.h	2;"	d
 NONE	server/include/color.h	2;"	d
-P	server/Makefile	/^P=$/;"	m
+PINK	client/bak/color.h	13;"	d
 PINK	client/include/color.h	13;"	d
 PINK	server/include/color.h	13;"	d
 POLLSIZE	udp/server.c	3;"	d	file:
-PORT	server/Makefile	/^PORT=$/;"	m
+Point	client/include/datatype.h	/^struct Point {$/;"	s
+Point	client/include/game.h	/^struct Point {$/;"	s
+Point	server/include/datatype.h	/^struct Point {$/;"	s
 Point	server/include/game.h	/^struct Point {$/;"	s
+RED	client/bak/color.h	5;"	d
 RED	client/include/color.h	5;"	d
 RED	server/include/color.h	5;"	d
+REDTEAM	client/include/datatype.h	3;"	d
+REDTEAM	client/include/game.h	3;"	d
+REDTEAM	server/include/datatype.h	3;"	d
 REDTEAM	server/include/game.h	3;"	d
+Score	client/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
 Score	server/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
+TransMsg	client/include/datatype.h	/^struct TransMsg {$/;"	s
+TransMsg	client/include/game.h	/^struct TransMsg {$/;"	s
+TransMsg	server/include/datatype.h	/^struct TransMsg {$/;"	s
 TransMsg	server/include/game.h	/^struct TransMsg {$/;"	s
+User	client/include/datatype.h	/^struct User {$/;"	s
+User	client/include/game.h	/^struct User {$/;"	s
+User	server/include/datatype.h	/^struct User {$/;"	s
 User	server/include/game.h	/^struct User {$/;"	s
+Write	client/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
 Write	server/src/draw.c	/^WINDOW *Football, *Message, *Help, *Score, *Write;$/;"	v
+YELLOW	client/bak/color.h	9;"	d
 YELLOW	client/include/color.h	9;"	d
 YELLOW	server/include/color.h	9;"	d
-add_event	server/src/udp_epoll.c	/^void add_event(int epollfd, int fd, int event) {$/;"	f
+add_event	client/src/udp_epoll.c	/^void add_event(int epollfd, int fd, int events) {$/;"	f
+add_event	server/src/udp_epoll.c	/^void add_event(int epollfd, int fd, int events) {$/;"	f
+add_event_ptr	client/src/udp_epoll.c	/^void add_event_ptr(int epollfd, int fd, int events, struct User *user) {$/;"	f
+add_event_ptr	server/src/udp_epoll.c	/^void add_event_ptr(int epollfd, int fd, int events, struct User *user) {$/;"	f
+add_to_sub_reactor	client/src/udp_epoll.c	/^void add_to_sub_reactor(struct User *user) {$/;"	f
+add_to_sub_reactor	server/src/udp_epoll.c	/^void add_to_sub_reactor(struct User *user) {$/;"	f
+bepollfd	server/server.c	/^int bepollfd;$/;"	v
 bteam	server/server.c	/^struct User *bteam;$/;"	v	typeref:struct:User
+carry	client/include/datatype.h	/^    int carry;$/;"	m	struct:Ctrl
+carry	client/include/game.h	/^    int carry;$/;"	m	struct:Ctrl
+carry	server/include/datatype.h	/^    int carry;$/;"	m	struct:Ctrl
 carry	server/include/game.h	/^    int carry;$/;"	m	struct:Ctrl
-conf	client/client.c	/^char conf[] = ".\/other\/conf";$/;"	v
+client_recv	client/include/client_recver.h	/^void client_recv(void *arg) {$/;"	f
+client_recv	client/src/client_recv.c	/^void *client_recv(void *arg) {$/;"	f
+client_recv	server/include/client_recver.h	/^void client_recv(void *arg) {$/;"	f
+client_recv	server/src/client_recv.c	/^void *client_recv(void *arg) {$/;"	f
+client_udp_connect	client/src/udp.c	/^int client_udp_connect(int sockfd) {$/;"	f
+client_udp_connect	server/src/udp.c	/^int client_udp_connect(int sockfd) {$/;"	f
+cond	client/include/thread_pool.h	/^    pthread_cond_t cond;$/;"	m	struct:task_queue
+cond	common/thread_pool.h	/^    pthread_cond_t cond;$/;"	m	struct:task_queue
+cond	server/common/thread_pool.h	/^    pthread_cond_t cond;$/;"	m	struct:task_queue
+cond	server/include/thread_pool.h	/^    pthread_cond_t cond;$/;"	m	struct:task_queue
+conf	client/client.c	/^char conf[] = ".\/other\/client.conf";$/;"	v
 conf	server/server.c	/^char conf[] = ".\/other\/server.conf";$/;"	v
 court	server/server.c	/^struct Map court;$/;"	v	typeref:struct:Map
+create_newwin	client/src/draw.c	/^WINDOW *create_newwin(int width, int height, int  startx, int starty) {$/;"	f
 create_newwin	server/src/draw.c	/^WINDOW *create_newwin(int width, int height, int  startx, int starty) {$/;"	f
+create_tcp_socket	client/src/tcp.c	/^int create_tcp_socket(int port) {$/;"	f
 create_tcp_socket	server/src/tcp.c	/^int create_tcp_socket(int port) {$/;"	f
-create_udp_socket	server/src/udp.c	/^int create_udp_socket(int port) {$/;"	f
+create_udp_socket	client/src/udp.c	/^int create_udp_socket() {$/;"	f
+create_udp_socket	server/src/udp.c	/^int create_udp_socket() {$/;"	f
+create_udp_socket_client	client/src/udp.c	/^int create_udp_socket_client() {$/;"	f
+create_udp_socket_client	server/src/udp.c	/^int create_udp_socket_client() {$/;"	f
+ctrl	client/include/datatype.h	/^    struct Ctrl ctrl;$/;"	m	struct:TransMsg	typeref:struct:TransMsg::Ctrl
+ctrl	client/include/game.h	/^    struct Ctrl ctrl;$/;"	m	struct:TransMsg	typeref:struct:TransMsg::Ctrl
+ctrl	server/include/datatype.h	/^    struct Ctrl ctrl;$/;"	m	struct:TransMsg	typeref:struct:TransMsg::Ctrl
 ctrl	server/include/game.h	/^    struct Ctrl ctrl;$/;"	m	struct:TransMsg	typeref:struct:TransMsg::Ctrl
-del_event	server/src/udp_epoll.c	/^void del_event(int epollfd, int fd, int events) {$/;"	f
+del_event	client/src/udp_epoll.c	/^void del_event(int epollfd, int fd) {$/;"	f
+del_event	server/src/udp_epoll.c	/^void del_event(int epollfd, int fd) {$/;"	f
+destroy_win	client/src/draw.c	/^void destroy_win(WINDOW *win) {$/;"	f
 destroy_win	server/src/draw.c	/^void destroy_win(WINDOW *win) {$/;"	f
+dirx	client/include/datatype.h	/^    int dirx;$/;"	m	struct:TransMsg
+dirx	client/include/game.h	/^    int dirx;$/;"	m	struct:TransMsg
+dirx	server/include/datatype.h	/^    int dirx;$/;"	m	struct:TransMsg
 dirx	server/include/game.h	/^    int dirx;$/;"	m	struct:TransMsg
+diry	client/include/datatype.h	/^    int diry;$/;"	m	struct:TransMsg
+diry	client/include/game.h	/^    int diry;$/;"	m	struct:TransMsg
+diry	server/include/datatype.h	/^    int diry;$/;"	m	struct:TransMsg
 diry	server/include/game.h	/^    int diry;$/;"	m	struct:TransMsg
+do_echo	client/src/thread_pool.c	/^void do_echo(struct User *user) {$/;"	f
+do_echo	common/thread_pool.c	/^void do_echo(struct User *user) {$/;"	f
+do_echo	server/common/thread_pool.c	/^void do_echo(struct User *user) {$/;"	f
+do_echo	server/src/thread_pool.c	/^void do_echo(struct User *user) {$/;"	f
+draw	client/src/draw.c	/^void *draw(void *arg) {$/;"	f
 draw	server/src/draw.c	/^void *draw(void *arg) {$/;"	f
+epoll_fd	server/server.c	/^int epoll_fd;$/;"	v
+epollfd	client/include/thread_pool.h	/^    int epollfd;$/;"	m	struct:task_queue
+epollfd	common/thread_pool.h	/^    int epollfd;$/;"	m	struct:task_queue
+epollfd	server/common/thread_pool.h	/^    int epollfd;$/;"	m	struct:task_queue
+epollfd	server/include/thread_pool.h	/^    int epollfd;$/;"	m	struct:task_queue
+fd	client/include/datatype.h	/^    int fd;$/;"	m	struct:User
+fd	client/include/game.h	/^    int fd;$/;"	m	struct:User
+fd	server/include/datatype.h	/^    int fd;$/;"	m	struct:User
+fd	server/include/game.h	/^    int fd;$/;"	m	struct:User
+find_sub	client/src/udp_epoll.c	/^int find_sub(struct User *team) {$/;"	f
+find_sub	server/src/udp_epoll.c	/^int find_sub(struct User *team) {$/;"	f
+flag	client/include/datatype.h	/^    int flag;$/;"	m	struct:User
+flag	client/include/game.h	/^    int flag;$/;"	m	struct:User
+flag	server/include/datatype.h	/^    int flag;$/;"	m	struct:User
 flag	server/include/game.h	/^    int flag;$/;"	m	struct:User
+gate_height	client/include/datatype.h	/^    int gate_height;$/;"	m	struct:Map
+gate_height	client/include/game.h	/^    int gate_height;$/;"	m	struct:Map
+gate_height	server/include/datatype.h	/^    int gate_height;$/;"	m	struct:Map
 gate_height	server/include/game.h	/^    int gate_height;$/;"	m	struct:Map
+gate_width	client/include/datatype.h	/^    int gate_width;$/;"	m	struct:Map
+gate_width	client/include/game.h	/^    int gate_width;$/;"	m	struct:Map
+gate_width	server/include/datatype.h	/^    int gate_width;$/;"	m	struct:Map
 gate_width	server/include/game.h	/^    int gate_width;$/;"	m	struct:Map
+get_value	client/src/getvalue.c	/^char *get_value(char *path, char *pattern) {$/;"	f
 get_value	server/src/getvalue.c	/^char *get_value(char *path, char *pattern) {$/;"	f
+gotoxy	client/src/draw.c	/^void gotoxy(int x, int y) {$/;"	f
 gotoxy	server/src/draw.c	/^void gotoxy(int x, int y) {$/;"	f
+gotoxy_putc	client/src/draw.c	/^void gotoxy_putc(int x, int y, char c) {$/;"	f
 gotoxy_putc	server/src/draw.c	/^void gotoxy_putc(int x, int y, char c) {$/;"	f
+gotoxy_puts	client/src/draw.c	/^void gotoxy_puts(int x, int y, char *str) {$/;"	f
 gotoxy_puts	server/src/draw.c	/^void gotoxy_puts(int x, int y, char *str) {$/;"	f
+head	client/include/thread_pool.h	/^    int head;$/;"	m	struct:task_queue
+head	common/thread_pool.h	/^    int head;$/;"	m	struct:task_queue
+head	server/common/thread_pool.h	/^    int head;$/;"	m	struct:task_queue
+head	server/include/thread_pool.h	/^    int head;$/;"	m	struct:task_queue
+heart_beat	client/src/heart_beat.c	/^void *heart_beat(void *arg) {$/;"	f
+heart_beat	server/src/heart_beat.c	/^void *heart_beat(void *arg) {$/;"	f
+heart_beat_team	client/src/heart_beat.c	/^void heart_beat_team(struct User *team) {$/;"	f
+heart_beat_team	server/src/heart_beat.c	/^void heart_beat_team(struct User *team) {$/;"	f
+height	client/include/datatype.h	/^    int height;$/;"	m	struct:Map
+height	client/include/game.h	/^    int height;$/;"	m	struct:Map
+height	server/include/datatype.h	/^    int height;$/;"	m	struct:Map
 height	server/include/game.h	/^    int height;$/;"	m	struct:Map
+initfootball	client/src/draw.c	/^void initfootball() {$/;"	f
 initfootball	server/src/draw.c	/^void initfootball() {$/;"	f
+kick	client/include/datatype.h	/^    int kick;$/;"	m	struct:Ctrl
+kick	client/include/game.h	/^    int kick;$/;"	m	struct:Ctrl
+kick	server/include/datatype.h	/^    int kick;$/;"	m	struct:Ctrl
 kick	server/include/game.h	/^    int kick;$/;"	m	struct:Ctrl
 main	client/client.c	/^int main(int argc, char **argv)$/;"	f
 main	server/server.c	/^int main(int argc, char **argv) {$/;"	f
 main	udp/server.c	/^int main(int argc, char **argv)$/;"	f
-name	server/include/game.h	/^    char name[20];$/;"	m	struct:LogData
+msg	client/include/datatype.h	/^    char msg[512];$/;"	m	struct:LogRequest
+msg	client/include/datatype.h	/^    char msg[512];$/;"	m	struct:LogResponse
+msg	client/include/datatype.h	/^    char msg[MAXMSG];$/;"	m	struct:FootBallMsg
+msg	client/include/game.h	/^    char msg[512];$/;"	m	struct:LogRequest
+msg	client/include/game.h	/^    char msg[512];$/;"	m	struct:LogResponse
+msg	client/include/game.h	/^    char msg[MAXMSG];$/;"	m	struct:FootBallMsg
+msg	server/include/datatype.h	/^    char msg[512];$/;"	m	struct:LogRequest
+msg	server/include/datatype.h	/^    char msg[512];$/;"	m	struct:LogResponse
+msg	server/include/datatype.h	/^    char msg[MAXMSG];$/;"	m	struct:FootBallMsg
+msg	server/include/game.h	/^    char msg[512];$/;"	m	struct:LogRequest
+msg	server/include/game.h	/^    char msg[512];$/;"	m	struct:LogResponse
+msg	server/include/game.h	/^    char msg[MAXMSG];$/;"	m	struct:FootBallMsg
+mutex	client/include/thread_pool.h	/^    pthread_mutex_t mutex;$/;"	m	struct:task_queue
+mutex	common/thread_pool.h	/^    pthread_mutex_t mutex;$/;"	m	struct:task_queue
+mutex	server/common/thread_pool.h	/^    pthread_mutex_t mutex;$/;"	m	struct:task_queue
+mutex	server/include/thread_pool.h	/^    pthread_mutex_t mutex;$/;"	m	struct:task_queue
+name	client/include/datatype.h	/^    char name[20];$/;"	m	struct:LogRequest
+name	client/include/datatype.h	/^    char name[20];$/;"	m	struct:User
+name	client/include/game.h	/^    char name[20];$/;"	m	struct:LogRequest
+name	client/include/game.h	/^    char name[20];$/;"	m	struct:User
+name	server/include/datatype.h	/^    char name[20];$/;"	m	struct:LogRequest
+name	server/include/datatype.h	/^    char name[20];$/;"	m	struct:User
+name	server/include/game.h	/^    char name[20];$/;"	m	struct:LogRequest
 name	server/include/game.h	/^    char name[20];$/;"	m	struct:User
+online	client/include/datatype.h	/^    int online;$/;"	m	struct:User
+online	client/include/game.h	/^    int online;$/;"	m	struct:User
+online	server/include/datatype.h	/^    int online;$/;"	m	struct:User
+online	server/include/game.h	/^    int online;$/;"	m	struct:User
+point	client/include/datatype.h	/^    struct Point point;$/;"	m	struct:User	typeref:struct:User::Point
+point	client/include/game.h	/^    struct Point point;$/;"	m	struct:User	typeref:struct:User::Point
+point	server/include/datatype.h	/^    struct Point point;$/;"	m	struct:User	typeref:struct:User::Point
 point	server/include/game.h	/^    struct Point point;$/;"	m	struct:User	typeref:struct:User::Point
+port	client/client.c	/^int port;$/;"	v
+port	server/server.c	/^int port;$/;"	v
+repollfd	server/server.c	/^int repollfd;$/;"	v
 rteam	server/server.c	/^struct User *rteam;$/;"	v	typeref:struct:User
+server_ip	client/client.c	/^char server_ip[20] = {0};$/;"	v
+server_ip	server/server.c	/^char server_ip[] = "127.0.0.1";$/;"	v
+server_port	client/client.c	/^int server_port = 0;$/;"	v
+server_port	server/server.c	/^int server_port = 8888;$/;"	v
+size	client/include/datatype.h	/^    int size;$/;"	m	struct:FootBallMsg
+size	client/include/game.h	/^    int size;$/;"	m	struct:FootBallMsg
+size	server/include/datatype.h	/^    int size;$/;"	m	struct:FootBallMsg
+size	server/include/game.h	/^    int size;$/;"	m	struct:FootBallMsg
+sockfd	client/client.c	/^int sockfd;$/;"	v
+start	client/include/datatype.h	/^    struct Point start;$/;"	m	struct:Map	typeref:struct:Map::Point
+start	client/include/game.h	/^    struct Point start;$/;"	m	struct:Map	typeref:struct:Map::Point
+start	server/include/datatype.h	/^    struct Point start;$/;"	m	struct:Map	typeref:struct:Map::Point
 start	server/include/game.h	/^    struct Point start;$/;"	m	struct:Map	typeref:struct:Map::Point
-team	server/include/game.h	/^    int team;$/;"	m	struct:LogData
+sub_reactor	client/src/sub_reactor.c	/^void *sub_reactor(void *arg) {$/;"	f
+sub_reactor	server/src/sub_reactor.c	/^void *sub_reactor(void *arg) {$/;"	f
+sum	client/include/thread_pool.h	/^    int sum;$/;"	m	struct:task_queue
+sum	common/thread_pool.h	/^    int sum;$/;"	m	struct:task_queue
+sum	server/common/thread_pool.h	/^    int sum;$/;"	m	struct:task_queue
+sum	server/include/thread_pool.h	/^    int sum;$/;"	m	struct:task_queue
+tail	client/include/thread_pool.h	/^    int tail;$/;"	m	struct:task_queue
+tail	common/thread_pool.h	/^    int tail;$/;"	m	struct:task_queue
+tail	server/common/thread_pool.h	/^    int tail;$/;"	m	struct:task_queue
+tail	server/include/thread_pool.h	/^    int tail;$/;"	m	struct:task_queue
+task_queue	client/include/thread_pool.h	/^struct task_queue {$/;"	s
+task_queue	common/thread_pool.h	/^struct task_queue {$/;"	s
+task_queue	server/common/thread_pool.h	/^struct task_queue {$/;"	s
+task_queue	server/include/thread_pool.h	/^struct task_queue {$/;"	s
+task_queue_init	client/src/thread_pool.c	/^void task_queue_init(struct task_queue *taskQueue, int sum, int epollfd) {$/;"	f
+task_queue_init	common/thread_pool.c	/^void task_queue_init(struct task_queue *taskQueue, int sum, int epollfd) {$/;"	f
+task_queue_init	server/common/thread_pool.c	/^void task_queue_init(struct task_queue *taskQueue, int sum, int epollfd) {$/;"	f
+task_queue_init	server/src/thread_pool.c	/^void task_queue_init(struct task_queue *taskQueue, int sum, int epollfd) {$/;"	f
+task_queue_pop	client/src/thread_pool.c	/^struct User *task_queue_pop(struct task_queue *taskQueue) {$/;"	f
+task_queue_pop	common/thread_pool.c	/^struct User *task_queue_pop(struct task_queue *taskQueue) {$/;"	f
+task_queue_pop	server/common/thread_pool.c	/^struct User *task_queue_pop(struct task_queue *taskQueue) {$/;"	f
+task_queue_pop	server/src/thread_pool.c	/^struct User *task_queue_pop(struct task_queue *taskQueue) {$/;"	f
+task_queue_push	client/src/thread_pool.c	/^void task_queue_push(struct task_queue *taskQueue, struct User *user) {$/;"	f
+task_queue_push	common/thread_pool.c	/^void task_queue_push(struct task_queue *taskQueue, struct User *user) {$/;"	f
+task_queue_push	server/common/thread_pool.c	/^void task_queue_push(struct task_queue *taskQueue, struct User *user) {$/;"	f
+task_queue_push	server/src/thread_pool.c	/^void task_queue_push(struct task_queue *taskQueue, struct User *user) {$/;"	f
+team	client/include/datatype.h	/^    int team; \/\/0 RED 1 BLUE$/;"	m	struct:LogRequest
+team	client/include/datatype.h	/^    int team;$/;"	m	struct:User
+team	client/include/game.h	/^    int team; \/\/0 RED 1 BLUE$/;"	m	struct:LogRequest
+team	client/include/game.h	/^    int team;$/;"	m	struct:User
+team	client/include/thread_pool.h	/^    struct User *team;$/;"	m	struct:task_queue	typeref:struct:task_queue::User
+team	common/thread_pool.h	/^    struct User **team;$/;"	m	struct:task_queue	typeref:struct:task_queue::User
+team	server/common/thread_pool.h	/^    struct User **team;$/;"	m	struct:task_queue	typeref:struct:task_queue::User
+team	server/include/datatype.h	/^    int team; \/\/0 RED 1 BLUE$/;"	m	struct:LogRequest
+team	server/include/datatype.h	/^    int team;$/;"	m	struct:User
+team	server/include/game.h	/^    int team; \/\/0 RED 1 BLUE$/;"	m	struct:LogRequest
 team	server/include/game.h	/^    int team;$/;"	m	struct:User
-udp_accept	server/src/udp_epoll.c	/^int udp_accept(int epollfd, int fd) {$/;"	f
-udp_connect	server/src/udp_epoll.c	/^int udp_connect(int epollfdd, struct sockaddr *serveraddr) {$/;"	f
+team	server/include/thread_pool.h	/^    struct User *team;$/;"	m	struct:task_queue	typeref:struct:task_queue::User
+thread_run	client/src/thread_pool.c	/^void *thread_run(void *arg) {$/;"	f
+thread_run	common/thread_pool.c	/^void *thread_run(void *arg) {$/;"	f
+thread_run	server/common/thread_pool.c	/^void *thread_run(void *arg) {$/;"	f
+thread_run	server/src/thread_pool.c	/^void *thread_run(void *arg) {$/;"	f
+type	client/include/datatype.h	/^    int type; \/\/ 0 success 1 faild$/;"	m	struct:LogResponse
+type	client/include/datatype.h	/^    int type;$/;"	m	struct:FootBallMsg
+type	client/include/game.h	/^    int type; \/\/ 0 success 1 faild$/;"	m	struct:LogResponse
+type	client/include/game.h	/^    int type;$/;"	m	struct:FootBallMsg
+type	server/include/datatype.h	/^    int type; \/\/ 0 success 1 faild$/;"	m	struct:LogResponse
+type	server/include/datatype.h	/^    int type;$/;"	m	struct:FootBallMsg
+type	server/include/game.h	/^    int type; \/\/ 0 success 1 faild$/;"	m	struct:LogResponse
+type	server/include/game.h	/^    int type;$/;"	m	struct:FootBallMsg
+udp_accept	client/src/udp_epoll.c	/^int udp_accept(int epollfd, int fd, struct User *user) {$/;"	f
+udp_accept	server/src/udp_epoll.c	/^int udp_accept(int epollfd, int fd, struct User *user) {$/;"	f
+udp_connect	client/src/udp.c	/^int udp_connect(char *ip_addr, int port) {$/;"	f
+udp_connect	client/src/udp_epoll.c	/^int udp_connect(int epollfd, struct sockaddr *serveraddr) {$/;"	f
+udp_connect	server/src/udp.c	/^int udp_connect(char *ip_addr, int port) {$/;"	f
+udp_connect	server/src/udp_epoll.c	/^int udp_connect(int epollfd, struct sockaddr *serveraddr) {$/;"	f
+udp_socket	client/src/udp.c	/^int udp_socket(int port) {$/;"	f
+udp_socket	server/src/udp.c	/^int udp_socket(int port) {$/;"	f
+w_gotoxy_putc	client/src/draw.c	/^void w_gotoxy_putc(WINDOW *win, int x, int y, char c) {$/;"	f
 w_gotoxy_putc	server/src/draw.c	/^void w_gotoxy_putc(WINDOW *win, int x, int y, char c) {$/;"	f
+w_gotoxy_puts	client/src/draw.c	/^void w_gotoxy_puts(WINDOW *win, int x, int y, char *str) {$/;"	f
 w_gotoxy_puts	server/src/draw.c	/^void w_gotoxy_puts(WINDOW *win, int x, int y, char *str) {$/;"	f
+width	client/include/datatype.h	/^    int width;$/;"	m	struct:Map
+width	client/include/game.h	/^    int width;$/;"	m	struct:Map
+width	server/include/datatype.h	/^    int width;$/;"	m	struct:Map
 width	server/include/game.h	/^    int width;$/;"	m	struct:Map
+x	client/include/datatype.h	/^    int x, y;$/;"	m	struct:Point
+x	client/include/game.h	/^    int x, y;$/;"	m	struct:Point
+x	server/include/datatype.h	/^    int x, y;$/;"	m	struct:Point
 x	server/include/game.h	/^    int x, y;$/;"	m	struct:Point
+y	client/include/datatype.h	/^    int x, y;$/;"	m	struct:Point
+y	client/include/game.h	/^    int x, y;$/;"	m	struct:Point
+y	server/include/datatype.h	/^    int x, y;$/;"	m	struct:Point
 y	server/include/game.h	/^    int x, y;$/;"	m	struct:Point

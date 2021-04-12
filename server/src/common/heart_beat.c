@@ -1,7 +1,7 @@
 #include "head.h"
 
 extern struct User *rteam, *bteam;
-
+extern int repollfd, bepollfd;
 void heart_beat_team(struct User *team) {
     struct FootBallMsg msg;
     msg.type = FT_TEST;
@@ -12,6 +12,12 @@ void heart_beat_team(struct User *team) {
                 continue;
             }
             send(team[i].fd, &msg, sizeof(msg), 0);
+            team[i].flag--;
+            if (team[i].flag <= 0) {
+                team[i].online = 0;
+                int epollfd_tmp = (team[i].team ? bepollfd : repollfd);
+                del_event(epollfd_tmp, team[i].fd);
+            }
         }
     }
 }

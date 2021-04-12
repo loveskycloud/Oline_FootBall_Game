@@ -4,7 +4,7 @@
 
 void add_event(int epollfd, int fd, int events);
 void add_event_ptr(int epollfd, int fd, int events, struct User *user);
-void del_event(int epollfd, int fd, int events);
+void del_event(int epollfd, int fd);
 int udp_connect(int epollfd, struct sockaddr *serveraddr);
 int udp_accept(int epollfd, int fd, struct User *user);
 int find_sub(struct User *team);
